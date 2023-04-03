@@ -6,6 +6,48 @@ docker-compose run --rm react-app sh -c "npm install -g create-react-app && crea
 docker-compose up
 
 
+
+
+
+
+
+
+```
+$ git clone git@github.com:roshiwata/ware-t-robot.git
+$ cd ware-t-robot/docker 
+$ docker-compose build
+$ docker-compose run --rm react-app sh -c "npm install -g create-react-app && create-react-app react-sample --template typescript"
+$ docker-compose up
+```
+
+※エラー発生
+```
+tatsu@tatsu-g15-ubuntu:~/05_azure/all_test_environment/ware-t-robot/docker$ docker-compose up
+Starting docker_react-app_1 ... done
+Attaching to docker_react-app_1
+react-app_1  | yarn run v1.22.18
+react-app_1  | $ react-scripts start
+react-app_1  | /bin/sh: react-scripts: not found
+react-app_1  | error Command failed with exit code 127.
+react-app_1  | info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+docker_react-app_1 exited with code 127
+```
+node_modulesがあるかどうかでこのエラーが発生するかが決まるみたい。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ■dockerなしでReactの雛形実装
 
 https://smillione.co.jp/it_blog/3006/
@@ -287,7 +329,6 @@ $ kubectl apply -f deploy.yml
 kubectl get podsで起動確認
 NAME                               READY   STATUS    RESTARTS   AGE
 react-todo-sample-cd8798b5-9xl9h   1/1     Running   0          71s
-
 
 kubectl get svcで外部IPアドレス確認
 NAME                TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)        AGE
