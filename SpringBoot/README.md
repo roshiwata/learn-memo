@@ -12,3 +12,5 @@ $ tar xvfz spring-tool-suite-4-4.18.0.RELEASE-e4.27.0-linux.gtk.x86_64.tar.gz
 $ cd sts-4.18.0.RELEASE/
 $ ./SpringToolSuite4
 ```
+※参考　STS、Eclipseの違い  
+https://spring.pleiades.io/guides/gs/sts/  
