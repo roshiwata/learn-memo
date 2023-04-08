@@ -15,6 +15,9 @@ $ ./SpringToolSuite4
 ※参考　STS、Eclipseの違い  
 https://spring.pleiades.io/guides/gs/sts/  
 
+※ショートカットランチャーの作成  
+https://pom2019.hatenablog.com/entry/20190506/174316  
+
 SpringBootはサーブレットコンテナが内蔵されている  
 それを使って直接サーバを起動してアプリケーションを実行します  
 →クラウド上でのデプロイに向いている  
@@ -38,3 +41,7 @@ tatsu@tatsu-g15-ubuntu:~/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/
 
 
 
+〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
+
+これでデプロイの勉強できそう！！
+https://learn.microsoft.com/ja-jp/azure/developer/java/spring-framework/deploy-spring-boot-java-app-on-kubernetes
