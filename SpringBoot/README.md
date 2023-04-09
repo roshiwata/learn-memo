@@ -81,4 +81,4 @@ server.port=8081
 server.port=8080になっている。  
 SpringBootの入門書3章を見て作ったWebアプリは以下に公開。  
 https://github.com/roshiwata/springboot-MyBootApp/tree/master  
-
+https://github.com/roshiwata/springboot-MyBootApp/tree/hello_world  
