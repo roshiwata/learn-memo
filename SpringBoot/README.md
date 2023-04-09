@@ -82,3 +82,30 @@ server.port=8080になっている。
 SpringBootの入門書3章を見て作ったWebアプリは以下に公開。  
 https://github.com/roshiwata/springboot-MyBootApp/tree/master  
 https://github.com/roshiwata/springboot-MyBootApp/tree/hello_world  
+
+
+
+https://github.com/roshiwata/springboot-MyBootApp/tree/master  
+をAKSに公開します。
+appy2ブランチを使います。
+```
+tatsu@tatsu-g15-ubuntu:~/07_springboot/communication-test/apply2/springboot-MyBootApp$ mvn spring-boot:run
+```
+でアクセスを確認
+localhost:8082
+
+```
+$ az login
+$ az config set defaults.acr=wesoffiresis
+$ az acr login
+$ az acr login && mvn compile jib:build
+$ az acr login --name wesoffiresis
+$ az aks get-credentials --resource-group wes-offi-p --name springboot-test-sample-comunication1
+$ kubectl create secret docker-registry acr-credential --docker-server=wesoffiresis.azurecr.io --docker-username=weswakaconresis --docker-password=G5U8IlHQZJXHPIi7M01Cjvb9X3l5UZt4/5xTptKZLw+ACRC9JQAz --docker-email=tatsuhiro.0323@gmail.com
+$ cd kubernetes
+$ kubectl apply -f deploy_apply2.yaml
+
+```
+
+
+
