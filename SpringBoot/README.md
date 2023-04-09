@@ -72,3 +72,13 @@ $ kubectl apply -f deploy.yml
 https://github.com/roshiwata/spring-boot-docker  
 spring-test1-230409 branch  
 deploy.ymlは別のものから少し変えました。
+
+※公開用のportを8080から別のものに変更  
+src/main/resources/application.properties  
+に  
+server.port=8081  
+などと記載。デフォルトでは
+server.port=8080になっている。  
+SpringBootの入門書3章を見て作ったWebアプリは以下に公開。  
+
+
