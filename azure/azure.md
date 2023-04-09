@@ -226,7 +226,8 @@ https://www.seplus.jp/dokushuzemi/blog/2022/01/aks_tutorial.html
 
 wes-offi-aks-sample5にデプロイ完了  
 be-image2 にOKのものをpushしました。  
-→そして、be-image3にkubernetesを追加しました。
+→そして、be-image3にkubernetesを追加しました。　　
+https://github.com/roshiwata/react-temp　　
 
 ```
 $ cd 05_azure
