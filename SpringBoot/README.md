@@ -38,8 +38,11 @@ tatsu@tatsu-g15-ubuntu:~/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/
 でもSTSでは実行できるの。  
 一旦この問題は無視。  
 
-
-
+3章まで終わらせて一旦次へ。  
+作業フォルダは以下です。
+```
+/home/tatsu/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/MyBootApp
+```
 
 〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
 
