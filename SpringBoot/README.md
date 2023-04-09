@@ -68,3 +68,7 @@ $ kubectl create secret docker-registry acr-credential --docker-server=wesoffire
 $ cd kubernetes
 $ kubectl apply -f deploy.yml
 ```
+コードはこちらに公開  
+https://github.com/roshiwata/spring-boot-docker  
+spring-test1-230409 branch  
+deploy.ymlは別のものから少し変えました。
