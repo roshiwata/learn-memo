@@ -101,7 +101,7 @@ $ az acr login
 $ az acr login && mvn compile jib:build
 $ az acr login --name wesoffiresis
 $ az aks get-credentials --resource-group wes-offi-p --name springboot-test-sample-comunication1
-$ kubectl create secret docker-registry acr-credential --docker-server=wesoffiresis.azurecr.io --docker-username=weswakaconresis --docker-password=G5U8IlHQZJXHPIi7M01Cjvb9X3l5UZt4/5xTptKZLw+ACRC9JQAz --docker-email=tatsuhiro.0323@gmail.com
+$ kubectl create secret docker-registry acr-credential2 --docker-server=wesoffiresis.azurecr.io --docker-username=wesoffiresis --docker-password=G5U8IlHQZJXHPIi7M01Cjvb9X3l5UZt4/5xTptKZLw+ACRC9JQAz --docker-email=tatsuhiro.0323@gmail.com
 $ cd kubernetes
 $ kubectl apply -f deploy_apply2.yaml
 
