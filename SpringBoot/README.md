@@ -46,5 +46,12 @@ tatsu@tatsu-g15-ubuntu:~/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/
 
 〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
 
-これでデプロイの勉強できそう！！
+これでデプロイの勉強を進める  
 https://learn.microsoft.com/ja-jp/azure/developer/java/spring-framework/deploy-spring-boot-java-app-on-kubernetes
+
+※java 17 にバージョンアップ  
+```
+$ sudo apt update
+$ sudo apt search openjdk-\(\.\)\+-jre$
+$ sudo apt install openjdk-17-jre
+```
