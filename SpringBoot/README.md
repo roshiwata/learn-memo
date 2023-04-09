@@ -55,3 +55,16 @@ $ sudo apt update
 $ sudo apt search openjdk-\(\.\)\+-jre$
 $ sudo apt install openjdk-17-jre
 ```
+
+jib-maven-pluginは、MavenプロジェクトをコンテナにビルドするためのMavenプラグインです。  
+これでコンテナ化できるみたい。  
+
+※デプロイの手順  
+AKSを作成（ex. wes-todo-sample）  
+```
+$ az acr login --name wesoffiresis
+$ az aks get-credentials --resource-group wes-offi-p --name wes-todo-sample
+$ kubectl create secret docker-registry acr-credential --docker-server=wesoffiresis.azurecr.io --docker-username=wesoffiresis --docker-password=G5U8IlHQZJXHPIi7M01Cjvb9X3l5UZt4/5xTptKZLw+ACRC9JQAz --docker-email=tatsuhiro.0323@gmail.com
+$ cd kubernetes
+$ kubectl apply -f deploy.yml
+```
