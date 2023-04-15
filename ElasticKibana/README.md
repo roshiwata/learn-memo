@@ -103,3 +103,12 @@ curl -X POST "localhost:9200/customer/_update/1?pretty&pretty" -H 'Content-Type:
 > '
 
 ```
+
+
+
+## エージェントを立てて、、をやってみる
+
+https://qiita.com/ryuichi1208/items/910764e721c47ba31386
+
+
+
