@@ -51,4 +51,55 @@ docs.count：保存しているドキュメント数。現段階ではドキュ�
 なぜかyellow。。。  
 
 
+これでやってみよう。  
+https://qiita.com/mug-cup/items/ba5dd0a14838e83e69ac  
 
+sudo sysctl -w vm.max_map_count=262144
+しないと以下のエラーになる。
+
+
+### 起動確認  
+```
+curl -X GET "localhost:9200/_cat/health?v&pretty"
+```
+
+### 各ノードのステータスを取得  
+```
+curl -X GET "localhost:9200/_cat/nodes?v&pretty"
+```
+
+
+### 例えば顧客情報を管理するcustomerindexを作成する場合は以下のようになります。  
+```
+curl -X PUT "localhost:9200/customer?pretty&pretty"
+```
+
+### indexのステータスは以下で確認することができる。  
+```
+curl -X GET "localhost:9200/_cat/indices?v&pretty"
+```
+
+### https://qiita.com/kiyokiyo_kzsby/items/344fb2e9aead158a5545  でいろいろお試し
+
+document追加  
+```
+curl -X PUT "localhost:9200/customer/_doc/12?pretty&pretty" -H 'Content-Type: application/json' -d'{
+  "namejjkk12": "Johnjjkk Doe1dddddd2"
+}
+'
+```
+確認  
+```
+curl -X GET "localhost:9200/customer/_doc/12?pretty&pretty"
+```
+
+
+更新
+```
+curl -X POST "localhost:9200/customer/_update/1?pretty&pretty" -H 'Content-Type: application/json' -d'
+> {
+>   "doc": { "name": "Jane Doe", "age": 20 }
+> }
+> '
+
+```
