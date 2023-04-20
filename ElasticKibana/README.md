@@ -115,10 +115,13 @@ Elastisearch	9200
 Kibana	5201
 Logstash	5044
 
+やっぱやめ。以下で行う。
+https://qiita.com/j-yama/items/98542cbb458ca723c766
 
-![Screenshot from 2023-04-20 16-50-31](https://user-images.githubusercontent.com/58873037/233297665-3b913e3c-be93-4fbc-94dd-b8ba4cb3be80.png)
+![Screenshot from 2023-04-20 17-07-13](https://user-images.githubusercontent.com/58873037/233301722-1797e836-4b50-4f80-866e-0da74476150f.png)
 
-
+Logstash, Beats(データ転送プロダクト)がElasticsearchにデータを送信。
+Elasticsearch内部のデータを使ってKibanaでデータを確認したり、ダッシュボードを表示
 
 
 
