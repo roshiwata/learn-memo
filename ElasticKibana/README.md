@@ -110,5 +110,15 @@ curl -X POST "localhost:9200/customer/_update/1?pretty&pretty" -H 'Content-Type:
 
 https://qiita.com/ryuichi1208/items/910764e721c47ba31386
 
+プロセス	ポート番号
+Elastisearch	9200
+Kibana	5201
+Logstash	5044
+
+
+![Screenshot from 2023-04-20 16-50-31](https://user-images.githubusercontent.com/58873037/233297665-3b913e3c-be93-4fbc-94dd-b8ba4cb3be80.png)
+
+
+
 
 
