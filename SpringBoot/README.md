@@ -130,3 +130,13 @@ RestContorollerの場合はこんな感じでModelAndViewみたいに書かな�
 
 
 Contorollerはreturn "index"でよい
+
+
+https://github.com/roshiwata/communication-springboot
+ここに、アプリ感通信をまとめた。(sample-1ブランチ)
+
+各アプリで実行する
+communication-springboot/app1/springboot-MyBootApp$ mvn spring-boot:run  
+communication-springboot/app2/springboot-MyBootApp$ mvn spring-boot:run  
+curl -X GET http://localhost:8081/hello
+
