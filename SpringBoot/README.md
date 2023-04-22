@@ -144,3 +144,37 @@ curl -X GET http://localhost:8081/hello
 
 AKSにダブルデプロイしてみよう   
 sample-2　　
+
+ついでにspringbootでAKSでデプロイする方法を整理しよう！！！！
+まず、初期のプロジェクト（https://github.com/spring-guides/gs-spring-boot-docker）から以下を追記
+
+https://github.com/roshiwata/spring-boot-docker/commit/be9d1f080836024984a9d7e080cc22590822ea6c
+https://github.com/roshiwata/spring-boot-docker/tree/spring-test1-230409/complete
+
+
+そして、pom.xmlのこの部分
+<image>${docker.image.prefix}/springboo-apply1</image>
+を変更する。これはdocker imageの名前を設定するところなの。
+各appにあるよ。
+
+ちなみに以下はAzureのACRを指定する場所だよ。
+<docker.image.prefix>wesoffiresis.azurecr.io</docker.image.prefix>
+
+Wでアプリをデプロイしたいから別の名前をつけるの。
+
+communication-springboot/app1/springboot-MyBootApp$ az acr login && mvn compile jib:build　　
+docker imageをそれぞれのappに対して作成（このあたりも自動化したいなあ）
+
+az acr login && mvn compile jib:build
+
+
+Azure上のACRに作成される  
+
+※デプロイの手順  
+AKSを作成（ex. wes-springboot-communication）  
+```
+$ az acr login --name wesoffiresis
+$ az aks get-credentials --resource-group wes-offi-p --name wes-springboot-communication
+$ kubectl create secret docker-registry acr-credential-com --docker-server=wesoffiresis.azurecr.io --docker-username=wesoffiresis --docker-password=G5U8IlHQZJXHPIi7M01Cjvb9X3l5UZt4/5xTptKZLw+ACRC9JQAz --docker-email=tatsuhiro.0323@gmail.com
+$ cd kubernetes
+$ kubectl apply -f deploy_apply_com.yml
