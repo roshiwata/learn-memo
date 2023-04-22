@@ -117,6 +117,16 @@ mvn compile
 mvn package
 mvn spring-boot:run
 
+@ContorollerはHTMLを返すことに特化している
+@RestContorollerは文字列とかいろいろ返すことができる。
+
+RestContorollerの場合はこんな感じでModelAndViewみたいに書かないとだめ。
+
+	@RequestMapping("/")
+	public ModelAndView index(ModelAndView mav) {
+		mav.setViewName("index");
+		return mav;
+	}
 
 
-
+Contorollerはreturn "index"でよい
