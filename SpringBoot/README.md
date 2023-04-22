@@ -108,4 +108,15 @@ $ kubectl apply -f deploy_apply2.yaml
 ```
 
 
+2023.04.22 再学習  
+VMを開発環境としてお試しのサービスを作りたい。  
+cd ~/07_springboot/220422/springboot-MyBootApp
+(git clone git@github.com:roshiwata/springboot-MyBootApp.git)
+
+mvn compile
+mvn package
+mvn spring-boot:run
+
+
+
 
