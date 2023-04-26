@@ -317,3 +317,12 @@ wes-todo-sample
 ワークスペースのリソース ID
 /subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/DefaultResourceGroup-EJP/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-4463a0e9-df15-4e30-ac13-45e4e74bb39f-EJP
 
+
+robot-iot-wakka
+デバイス ID　ubuntu-dell-g15
+主キー　ubuntu-dell-g15
+セカンダリ キー　GPFKcz3sW/xOF57IpwXa/OEKg4F12RSaPrI9CX8EcF8=
+プライマリ接続文字列　HostName=robot-iot-wakka.azure-devices.net;DeviceId=ubuntu-dell-g15;SharedAccessKey=J81d7NtnD0R4U5ETtZi3MfDkUlF2RUji5f44Z4cVEAU=
+セカンダリ接続文字列　HostName=robot-iot-wakka.azure-devices.net;DeviceId=ubuntu-dell-g15;SharedAccessKey=GPFKcz3sW/xOF57IpwXa/OEKg4F12RSaPrI9CX8EcF8=
+
+ID　/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/wes-robot-test/providers/Microsoft.Devices/IotHubs/robot-iot-wakka
