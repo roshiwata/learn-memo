@@ -191,3 +191,4 @@ kubernetes      ClusterIP      10.0.0.1      <none>        443/TCP        14m
 spring-apply1   LoadBalancer   10.0.91.35    <pending>     81:32066/TCP   9m19s
 spring-apply2   LoadBalancer   10.0.126.16   <pending>     82:31186/TCP   9m19s
 
+まあこれはおそらくAKSクラスタのスケールの問題やな
