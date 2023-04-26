@@ -51,6 +51,19 @@ https://fwywd.com/tech/deployment-by-azure-app-service-for-nodejs
 package.json の start スクリプトを  
 Azure で　構成→スタートアップコマンドに入力（node index.js）
 
+```
+wes-robot-webapp
+https://github.com/roshiwata/ware-t-robot
+main branch
+
+wes-robot-webapp2
+https://github.com/roshiwata/react-app
+master branch
+
+wes-robot-webapp3
+https://github.com/roshiwata/waka-azure-deploy-express
+main branch
+```
 
 ## Azure IoT Hubの使用
 基本はこれ  
@@ -275,4 +288,32 @@ react-todo-sample   LoadBalancer   10.0.194.36   20.89.189.99   80:32387/TCP   7
 　・githubと連携してpushしたら勝手にビルドテストしてくれるようにする  
 　・外部公開したWebアプリをSSL暗号化  
 
+###
+AKS
+リソース ID
+
+aks-sample-aks
+リソース ID
+/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourcegroups/rg-sample/providers/Microsoft.ContainerService/managedClusters/aks-sample-aks
+
+wes-offi-aks-sample5
+リソース ID
+/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourcegroups/wes-offi-p/providers/Microsoft.ContainerService/managedClusters/wes-offi-aks-sample5
+
+ワークスペースのリソース ID
+/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/DefaultResourceGroup-EJP/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-4463a0e9-df15-4e30-ac13-45e4e74bb39f-EJP
+
+wes-springboot-communication
+リソース ID
+/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourcegroups/wes-offi-p/providers/Microsoft.ContainerService/managedClusters/wes-springboot-communication
+
+ワークスペースのリソース ID
+/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/DefaultResourceGroup-EJP/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-4463a0e9-df15-4e30-ac13-45e4e74bb39f-EJP
+
+wes-todo-sample
+リソース ID
+/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourcegroups/wes-offi-p/providers/Microsoft.ContainerService/managedClusters/wes-todo-sample
+
+ワークスペースのリソース ID
+/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/DefaultResourceGroup-EJP/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-4463a0e9-df15-4e30-ac13-45e4e74bb39f-EJP
 
