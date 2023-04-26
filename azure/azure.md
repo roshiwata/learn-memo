@@ -326,3 +326,16 @@ robot-iot-wakka
 セカンダリ接続文字列　HostName=robot-iot-wakka.azure-devices.net;DeviceId=ubuntu-dell-g15;SharedAccessKey=GPFKcz3sW/xOF57IpwXa/OEKg4F12RSaPrI9CX8EcF8=
 
 ID　/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/wes-robot-test/providers/Microsoft.Devices/IotHubs/robot-iot-wakka
+
+
+
+wak-iothub
+
+デバイス ID　dell-laptop-test1
+主キー　pf961U/ndtSp5AhAF1efbkf/JHzgn4gkeiWbUdNLKBc=
+セカンダリ キー　8txVYvD/nseMpMA1zHvBVA1aDIcraZHreljUfY+kqaA=
+プライマリ接続文字列　HostName=wak-iothub.azure-devices.net;DeviceId=dell-laptop-test1;SharedAccessKey=pf961U/ndtSp5AhAF1efbkf/JHzgn4gkeiWbUdNLKBc=
+セカンダリ接続文字列　HostName=wak-iothub.azure-devices.net;DeviceId=dell-laptop-test1;SharedAccessKey=8txVYvD/nseMpMA1zHvBVA1aDIcraZHreljUfY+kqaA=
+
+
+
