@@ -178,3 +178,16 @@ $ az aks get-credentials --resource-group wes-offi-p --name wes-springboot-commu
 $ kubectl create secret docker-registry acr-credential-com --docker-server=wesoffiresis.azurecr.io --docker-username=wesoffiresis --docker-password=G5U8IlHQZJXHPIi7M01Cjvb9X3l5UZt4/5xTptKZLw+ACRC9JQAz --docker-email=tatsuhiro.0323@gmail.com
 $ cd kubernetes
 $ kubectl apply -f deploy_apply_com.yml
+
+
+うーむ。。。↓↓↓↓↓↓
+tatsu@tatsu-g15-ubuntu:~/07_springboot/220422/communication-springboot/kubernetes$ kubectl get pods
+NAME                            READY   STATUS    RESTARTS   AGE
+spring-apply1-bc945f594-59brk   1/1     Running   0          6m18s
+spring-apply2-bbf985d86-hfl8f   1/1     Running   0          7m28s
+tatsu@tatsu-g15-ubuntu:~/07_springboot/220422/communication-springboot/kubernetes$ kubectl get svc
+NAME            TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)        AGE
+kubernetes      ClusterIP      10.0.0.1      <none>        443/TCP        14m
+spring-apply1   LoadBalancer   10.0.91.35    <pending>     81:32066/TCP   9m19s
+spring-apply2   LoadBalancer   10.0.126.16   <pending>     82:31186/TCP   9m19s
+
