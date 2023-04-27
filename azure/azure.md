@@ -337,5 +337,5 @@ wak-iothub
 プライマリ接続文字列　HostName=wak-iothub.azure-devices.net;DeviceId=dell-laptop-test1;SharedAccessKey=pf961U/ndtSp5AhAF1efbkf/JHzgn4gkeiWbUdNLKBc=
 セカンダリ接続文字列　HostName=wak-iothub.azure-devices.net;DeviceId=dell-laptop-test1;SharedAccessKey=8txVYvD/nseMpMA1zHvBVA1aDIcraZHreljUfY+kqaA=
 
-
+ID　/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/waka-iot-hub/providers/Microsoft.Devices/IotHubs/wak-iothub
 
