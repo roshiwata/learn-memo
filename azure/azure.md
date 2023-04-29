@@ -339,3 +339,8 @@ wak-iothub
 
 ID　/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/waka-iot-hub/providers/Microsoft.Devices/IotHubs/wak-iothub
 
+
+## AzureADによるVMの認証
+
+
+
