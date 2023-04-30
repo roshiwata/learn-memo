@@ -404,3 +404,23 @@ https://learn.microsoft.com/ja-jp/cli/azure/install-azure-cli-linux?pivots=apt
 
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bashで一発
 
+ユーザー割り当てマネージドID
+システム割り当てマネージドIDがある
+
+違いはこちら
+
+システム割り当てマネージドIDはリリース作成時に勝手にできるもの（リソースを削除すると勝手に削除される。）
+ユーザ割り当てマネージドIDは自分で作るもの　自分で接続元には割り当て設定を、接続先にはアクセス制御設定をする必要がある。
+接続元
+![image](https://user-images.githubusercontent.com/58873037/235343150-cf251fa0-f840-4a40-bda6-26f00252c964.png)
+
+接続先
+![image](https://user-images.githubusercontent.com/58873037/235343188-a42bd38a-bb0a-4480-b162-1d0acdd9f52c.png)
+
+でもこれでSSH接続できるようになるわけではなかった。
+SSHアクセスはあくまでもユーザとのして認証しに行っているからまた別なんだろう。いったん保留。
+AKSの時みたいにコードからのアクセスはできるのだろう。（https://techblog.ap-com.co.jp/entry/2022/12/02/113000）
+
+
+これがかなり参考になりそう。熟読しよう。
+https://tech-lab.sios.jp/archives/27461
