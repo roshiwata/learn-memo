@@ -437,3 +437,25 @@ https://tech-lab.sios.jp/archives/23371
 
 サービスプリンシパルは、アプリケーション用のIDである。
 サービスプリンシパルは、アプリケーションの具現化インスタンスである。
+
+
+「アプリの登録」から「新規登録」
+「アプリの登録」の一覧に表示される。
+エンタープライズ アプリケーション にも表示される
+エンタープライズ アプリケーション＝サービスプリンシパルである。
+
+サービスプリンシパルはアプリケーションの具現化インスタンスなのさ。
+
+アプリの登録で
+wakayama-poc-appliaction-test01 | 証明書とシークレット
+で新しいクライアントシークレット
+
+値
+ZQu8Q~~OnmdhOaViBhHb14M3PNiOkjiBRn4yJcvJ
+
+![image](https://user-images.githubusercontent.com/58873037/235348500-3ebece21-1976-4298-9bb3-81cb49ba40d2.png)
+
+VMのアクセス制御でサービスプリンシパルを許可
+
+
+![image](https://user-images.githubusercontent.com/58873037/235348884-ebd420ba-351a-493c-9a4f-91a0e411f128.png)
