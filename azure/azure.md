@@ -360,6 +360,17 @@ az ssh vm --resource-group wakayama-poc-rg --name wakayama-poc-test02
 VMの設定でアクセス制御（IAM）で追加から管理マシンの管理者ログインを追加すると行けた
 仮想マシンのユーザー ログインでも可
 
+
+az ssh vmでログインした場合、アクセス制御の権限になるので
+ユーザー権限の時はsudo使えません。
+
+az ssh vmでログインしたら、
+tatsuhiro.0323@gmail.com@wakayama-poc-test02:
+
+ssh ---でログインしたら、
+wakayama@wakayama-poc-test02
+
+
 VM作るときにAzureADを利用。をクリックしないとこのログイン方法は無理
 
 アクセス制御のところに以下のものが初期である。これ何だろう。
@@ -381,4 +392,15 @@ NEXT　システム割り当てマネージド IDでログインを試したい
 
 ３　パスワード
 １，２，４，５　SSHキーペア認証
+
+
+azコマンドのインストール
+https://learn.microsoft.com/ja-jp/cli/azure/install-azure-cli-windows?tabs=azure-cli
+
+Windows：「AzureCLIの最新のリリース」
+
+Linux:
+https://learn.microsoft.com/ja-jp/cli/azure/install-azure-cli-linux?pivots=apt
+
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bashで一発
 
