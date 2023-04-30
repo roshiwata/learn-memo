@@ -459,3 +459,35 @@ VMのアクセス制御でサービスプリンシパルを許可
 
 
 ![image](https://user-images.githubusercontent.com/58873037/235348884-ebd420ba-351a-493c-9a4f-91a0e411f128.png)
+
+
+
+az login --service-principal --username 4116a769-a51f-4420-9f7e-8a9651568a22 --password ZQu8Q~~OnmdhOaViBhHb14M3PNiOkjiBRn4yJcvJ --tenant 7979adce-21e6-45ac-852a-3199b7e7bf25
+
+
+az vm show -g wakayama-poc-rg -n wakayama-poc-test-sp01
+で見れる
+
+アクセス制御を付与していないVMだとエラーになる
+az vm show -g wakayama-poc-rg -n wakayama-poc-test06
+
+![image](https://user-images.githubusercontent.com/58873037/235349541-73430ebd-3ac3-4b70-81ff-4b535b6260f9.png)
+
+![image](https://user-images.githubusercontent.com/58873037/235350296-13e529a6-86b5-4ffc-a9f2-0a5ade15f42b.png)
+
+クライアント用のアプリケーション/サービスプリンシパルを作成
+wakayama-poc-appliaction-client01 
+ctg8Q~BZazSR5s8QmlpnuAWr6T4Qj~QBSY19-bKT
+ctg8Q~BZazSR5s8QmlpnuAWr6T4Qj~QBSY19-bKT
+
+![image](https://user-images.githubusercontent.com/58873037/235350306-a28be673-6933-4c42-a220-fe1e28c24bcd.png)
+
+https://login.microsoftonline.com/7979adce-21e6-45ac-852a-3199b7e7bf25/oauth2/v2.0/authorize?client_id=5cbd47bd-7348-4dc2-9f3e-dcb56f5efbbd&response_type=code&redirect_uri=https://localhost/&state=12345&scope=api://54906d20-a047-4e70-b651-69d5eb47b6b7/files.read
+
+https://localhost/?code=0.AWoAzq15eeYhrEWFKjGZt-e_Jb1HvVxIc8JNnz7ctW9e-71qAJo.AgABAAIAAAD--DLA3VO7QrddgJg7WevrAgDs_wUA9P_9c4ERodSQXsCF0OkLXQaLicnX7bWrilJZ_InX9SIsmbo1v8alF1Ae1lz-a_fPh92FMLHyot1-MfhqL6rEcC1DPguMKJc4aCxI7Einw_BCx3XoAdgpQorxWpfuHP6PnXieIEqguH23YFycfhwkD1wjJEchzFWP2PuAakpsp6qhANnH_bemsd_bpMB5e_JtdZo-njD7ZvtO7l4LrTOV0fh7KdDnmSipxeK8thPdQwaUWPR5xhMN8oOwi_npON-S9bgHRH4WwYi5Xu4UoRYx2fvJlKlfF19OSuSTkQqmQ-T8r6EZWwpvpcTuHhze8autVZsZYTnoajQAIwLWR8PhU2zwWJT9mmzAPx7pPLrCu3bEyBIQx3viRwRv0aI0B_bh2HDAVK1v_2b_NsSR-uRCQZ4noLfyOZvSB7ccjyMTPOLnuRHkIUcqPndHil-vfxY_tM_dDi7rvh-kdYfc5fc6dQ_-Ef2mTuT5J3YIDz6TdYz2WNzkZd0IOlGlaK2ygwL9PpA47ov5yfctn1htDV2yQXkeBvbyG2gBOeO3pz9zoxAFOZVlOp4QAw_4sgz6VcXkc23mgFu3uTi-q3bjtJbRcgGKKPo55M5VN0JbJDHekFmAXfjeOwJEfUlkN3M5S9sEcIJqwd410NvY2hxo6DEybEWWy_bkFhSwfYYtom-tgZIfuO8i3j93KWZe8tPOn8w_PEZ5oUGmkIT3zS0C1iiUskJ_KRZ3eOvC0IMUSyg48iaaP82UX-6zHgVmNhmVm1cdY1RHT9PMOns_nfxDhe36coJvELUfRXd0d2AS8V_0thA790X5aFDcH-6DV9f4xKvqrHVvvqft_p-toCeiHiCO0bHze6AmZPFiBhMtie-yFrs6MngYfuDmuGSmJfRTe5YrEfaWBPLvKQit1fhnupP1oOytOZFxay_zAJWxbxz5yBi9pYNeUcJtohYdfJIophOxiNVs9JXFth6sZe41havDQiMFU_kV-zQ5vRjwznhNBZgqDQGQFSDK5tW_eTKpNcAF9yJ2fEE_FJEx9Dl8jWmrhY5yRWEhXkqTl2MdfuDW-km9X6Yef4SiKEOB0FdplYlN4DcVJqWCLWguo4p9_1F4dOfGULy9CrZrd18-wzwRD5DmkX0oJJcK70_KmRSrlhHG7oF72Q-nW2TZOLHqK4O-0Xs0hxjRWX0AfGP1iMG4cfldrC_X4IeRsHV69Fm8NVGGi1uYpopAmMdrX0Ub4hBPjNjFDEhKWeT-VGEEkRzsrUtJcfR7XsdZkkQZuo3W2rLKJLvxU_I&state=12345&session_state=d8fc0147-d5e0-4c52-8987-975a4666560e#
+
+これは不要
+client 
+mv~8Q~N_sQDOJqA3OrRPouXrFjik1Bdfbk8h6dvq
+
+
