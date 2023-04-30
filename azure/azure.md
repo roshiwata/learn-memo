@@ -370,4 +370,15 @@ VM作るときにAzureADを利用。をクリックしないとこのログイ�
 あまり深追いはしない
 
 
-NEXT　ユーザ割り当てIDでログインを試したい
+NEXT　システム割り当てマネージド IDでログインを試したい
+
+![image](https://user-images.githubusercontent.com/58873037/235335635-a629973b-aa20-4e5e-ab81-630b3e00f846.png)
+
+
+
+１，４　AzureAD認証しない
+２，３，５　AzureAD認証する
+
+３　パスワード
+１，２，４，５　SSHキーペア認証
+
