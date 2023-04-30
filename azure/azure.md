@@ -521,4 +521,18 @@ curl -X POST https://login.microsoftonline.com/7979adce-21e6-45ac-852a-3199b7e7b
 
 　クライアントがアクセストークンを受け取るために必要な認可コードを事前にユーザが受け取っておく
  
+ アクセストークンを用いてどのようにリソースにアクセスするかは割愛されている。。。。
  
+ 【マルチテナント】
+ マルチテナントの場合、以下かと思いきや
+ 
+ ![image](https://user-images.githubusercontent.com/58873037/235360765-21c18c02-83b2-4584-8660-0ec5a97d1d32.png)
+
+ 
+こうできる！！
+テナントごとにアプリ登録しなくてよい
+![image](https://user-images.githubusercontent.com/58873037/235360798-0f1c2573-f1ba-494f-b455-cfcc9d95c908.png)
+
+
+
+
