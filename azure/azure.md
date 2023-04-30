@@ -342,5 +342,31 @@ ID　/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/waka-iot
 
 ## AzureADによるVMの認証
 
+これでやってみよう。
+https://learn.microsoft.com/ja-jp/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux
+
+Azure ロールベースのアクセス制御 (RBAC) ポリシー　条件付きアクセス ポリシー
+で権限を色々と変えられる。これなんだろう。。
+
+⇒VM にログインできるユーザーを決定する
+「管理者権限」「ユーザー権限」
+の２つがある。
+
+azコマンど使えるようにインストール
+
+az ssh vm --resource-group wakayama-poc-rg --name wakayama-poc-test02
+によるログインはキーの有無にかかわらず
+
+VMの設定でアクセス制御（IAM）で追加から管理マシンの管理者ログインを追加すると行けた
+仮想マシンのユーザー ログインでも可
+
+アクセス制御のところに以下のものが初期である。これ何だろう。
+・ユーザー アクセス管理者
+・仮想マシンの管理者ログイン
+・共同作成者
+・所有者
+あまり深追いはしない
+
+OpenSSH ってなに？
 
 
