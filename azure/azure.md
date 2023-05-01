@@ -342,6 +342,11 @@ ID　/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/waka-iot
 
 ## AzureADによるVMの認証
 
+
+https://learn.microsoft.com/ja-jp/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux
+https://learn.microsoft.com/ja-jp/cli/azure/ssh?view=azure-cli-latest
+https://learn.microsoft.com/ja-jp/cli/azure/install-azure-cli-windows?tabs=azure-cli
+
 これでやってみよう。
 https://learn.microsoft.com/ja-jp/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux
 
