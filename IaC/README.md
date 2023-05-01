@@ -39,3 +39,23 @@ C:\Users\tatsu\OneDrive\12_github>az deployment group create --resource-group "w
 【メインテンプレートとリンク済みテンプレートをデプロイ】
 
 C:\Users\tatsu\OneDrive\12_github>az storage account create --resource-group "StorageAccountRG" --name "storageaccount4swaaa" --location "japaneast" --sku "Standard_LRS"
+
+
+
+## Bicep の方がいいらしい 
+https://qiita.com/tetsuya-ooooo/items/9812d30d55b72044fd4d
+
+az bicep install
+
+bicepをデプロイすると内部的にARMテンプレにコンパイルされとる！
+bicepの方が見やすいし書きやすい
+
+## GitHubと連携させる。
+
+https://learn.microsoft.com/ja-jp/training/modules/build-first-bicep-deployment-pipeline-using-github-actions/3-exercise-create-run-basic-workflow
+
+
+そもそものGitHubActionsのお勉強もしよう
+
+- runs-onはdocker imageを指定してるよ
+
