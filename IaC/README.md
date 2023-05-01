@@ -94,5 +94,14 @@ az ad app create --display-name 'IcA-test'
 ではサービスプリンシパルは作成されないが、以下で作成されるのだ。
 az ad sp create --id <application-id>
 ただ、この作り方だと「すべてのアプリケーション」でしか作成されないのだ。。
+
+
+resourceGroupResourceId=$(az group create --name ToyWebsite --location westus3 --query id --output tsv)
+az role assignment create --assignee $applicationRegistrationAppId --role Contributor --scope $resourceGroupResourceId
+
+echo "AZURE_CLIENT_ID: $applicationRegistrationAppId"
+echo "AZURE_TENANT_ID: $(az account show --query tenantId --output tsv)"
+echo "AZURE_SUBSCRIPTION_ID: $(az account show --query id --output tsv)"
+をGitHubシークレットに登録
 ```
 
