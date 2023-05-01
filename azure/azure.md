@@ -592,3 +592,26 @@ curl -X POST https://login.microsoftonline.com/7979adce-21e6-45ac-852a-3199b7e7b
 
 
 
+マネージドIDがある場合、
+VM（接続元）の設定でIDを有効にしてあげたら勝手にサービスプリンシパル（マネージドID）が出来上がる。
+これをリソース（接続先）のアクセス制御で許可してあげたらOK
+
+マネージドIDがない場合、
+アプリの登録から、サービスプリンシパルを作成
+それをリソース（接続先）のアクセス制御で許可してあげるOK
+
+本質的な違いは、アクセストークンの呼び方
+マネージドIDがある場合、
+VMの中から以下を実行
+curl 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https%3A%2F%2Fstorage.azure.com%2F' -H Metadata:true -s
+
+
+マネージドIDがない場合、
+どこからでもOKで、以下を実行
+curl -X POST https://login.microsoftonline.com/[先程メモしたディレクトリID]/oauth2/token -F grant_type=client_credentials -F resource=https://storage.azure.com/ -F client_id=[先程メモしたアプリケーションID] -F client_secret=[先程メモしたクライアントシークレット] | jq -r .access_token
+
+
+コマンドに固有情報があるかどうか！！
+Azure Instance Metadata Service（169.254.169.254）が接続元のVMを認識してよしなにしてくれるのだ。
+
+
