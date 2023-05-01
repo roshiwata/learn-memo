@@ -93,4 +93,6 @@ az ad app federated-credential create \
 az ad app create --display-name 'IcA-test'
 ではサービスプリンシパルは作成されないが、以下で作成されるのだ。
 az ad sp create --id <application-id>
+ただ、この作り方だと「すべてのアプリケーション」でしか作成されないのだ。。
 ```
+
