@@ -564,4 +564,15 @@ Azure Instance Metadata Service
 「見れる」というより、それらを使って代わりにトークンをAzureADから取得してくれる。それをVMに返してくれる。
 
 
+https://tech-lab.sios.jp/archives/27461
+を実践。
+
+アプリ登録「blobsp」
+ストレージアカウント作成「storagetestwakayama001」
+
+
+curl -X POST https://login.microsoftonline.com/7979adce-21e6-45ac-852a-3199b7e7bf25/oauth2/token -F grant_type=client_credentials -F resource=https://storage.azure.com/ -F client_id=d005a0ca-540e-4df3-a790-f11a03beb6f7 -F client_secret=OGw8Q~I.iEk2gA3thjgAAMsTojkNgNZXZ47.ZbqL | jq -r .access_token
+
+
+
 
