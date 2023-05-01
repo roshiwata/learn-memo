@@ -578,6 +578,15 @@ https://tech-lab.sios.jp/archives/27461
 
 curl -X POST https://login.microsoftonline.com/7979adce-21e6-45ac-852a-3199b7e7bf25/oauth2/token -F grant_type=client_credentials -F resource=https://storage.azure.com/ -F client_id=d005a0ca-540e-4df3-a790-f11a03beb6f7 -F client_secret=OGw8Q~I.iEk2gA3thjgAAMsTojkNgNZXZ47.ZbqL | jq -r .access_token
 
+これがサービスプリンシパルIDです  
+![image](https://user-images.githubusercontent.com/58873037/235387509-bb714e1d-0502-440e-95fb-63d68cd07c23.png)
+
+
+![image](https://user-images.githubusercontent.com/58873037/235387731-b7715ba0-afcd-43c6-aac4-c4586d00f1f3.png)
+
+
+マネージドIDだけ別やねんなあ  
+![image](https://user-images.githubusercontent.com/58873037/235388024-e7a33769-6b74-4a86-af83-437548318a11.png)
 
 
 
