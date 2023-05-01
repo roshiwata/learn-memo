@@ -25,6 +25,8 @@ ARMテンプレートをAzureにデプロイする方法：
 - メインテンプレートとリンク済みテンプレートをデプロイ
 - 継続的デプロイパイプラインでデプロイ
 
+
+【ローカルテンプレートをデプロイ】
 Visual StudioでARM Tools拡張をインストール
 
 sample.json
@@ -34,3 +36,6 @@ C:\Users\tatsu\OneDrive\12_github>az deployment group create --resource-group "w
 
 ![image](https://user-images.githubusercontent.com/58873037/235415328-e2892409-519b-4afe-9a54-97d336283390.png)
 
+【メインテンプレートとリンク済みテンプレートをデプロイ】
+
+C:\Users\tatsu\OneDrive\12_github>az storage account create --resource-group "StorageAccountRG" --name "storageaccount4swaaa" --location "japaneast" --sku "Standard_LRS"
