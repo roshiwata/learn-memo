@@ -60,8 +60,7 @@ https://learn.microsoft.com/ja-jp/training/modules/build-first-bicep-deployment-
 - runs-onはdocker imageを指定してるよ
 
 
-githubOrganizationName='roshiwata'
-githubRepositoryName='IcA-test'
+
 
 jqのインストール
 https://zenn.dev/unsoluble_sugar/articles/e47b37b04dd1153d5b29
@@ -73,4 +72,19 @@ https://chat.openai.com/
 https://github.com/roshiwata/IcA-test/actions  
 https://portal.azure.com/#cloudshell/  
 
+ワークロードIDの作成、GitHubへの紐づけ
+```
+githubOrganizationName='roshiwata'
+githubRepositoryName='IcA-test'
+applicationRegistrationDetails=$(az ad app create --display-name 'IcA-test')
+
+applicationRegistrationObjectId=$(echo $applicationRegistrationDetails | jq -r '.id')
+applicationRegistrationAppId=$(echo $applicationRegistrationDetails | jq -r '.appId')
+
+az ad app federated-credential create \
+   --id $applicationRegistrationObjectId \
+   --parameters "{\"name\":\"toy-website-workflow\",\"issuer\":\"https://token.actions.githubusercontent.com\",\"subject\":\"repo:${githubOrganizationName}/${githubRepositoryName}:ref:refs/heads/main\",\"audiences\":[\"api://AzureADTokenExchange\"]}"
+
+
+```
 
