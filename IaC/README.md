@@ -68,4 +68,9 @@ https://zenn.dev/unsoluble_sugar/articles/e47b37b04dd1153d5b29
 https://stedolan.github.io/jq/
 
 
+https://learn.microsoft.com/ja-jp/training/modules/build-first-bicep-deployment-pipeline-using-github-actions/5-exercise-create-github-secret?pivots=cli  
+https://chat.openai.com/  
+https://github.com/roshiwata/IcA-test/actions  
+https://portal.azure.com/#cloudshell/  
+
 
