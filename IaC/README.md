@@ -59,3 +59,13 @@ https://learn.microsoft.com/ja-jp/training/modules/build-first-bicep-deployment-
 
 - runs-onはdocker imageを指定してるよ
 
+
+githubOrganizationName='roshiwata'
+githubRepositoryName='IcA-test'
+
+jqのインストール
+https://zenn.dev/unsoluble_sugar/articles/e47b37b04dd1153d5b29
+https://stedolan.github.io/jq/
+
+
+
