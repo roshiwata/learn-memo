@@ -98,10 +98,41 @@ az ad sp create --id <application-id>
 
 resourceGroupResourceId=$(az group create --name ToyWebsite --location westus3 --query id --output tsv)
 az role assignment create --assignee $applicationRegistrationAppId --role Contributor --scope $resourceGroupResourceId
+⇒エラーが出る。(※1と同じ)
 
 echo "AZURE_CLIENT_ID: $applicationRegistrationAppId"
 echo "AZURE_TENANT_ID: $(az account show --query tenantId --output tsv)"
 echo "AZURE_SUBSCRIPTION_ID: $(az account show --query id --output tsv)"
 をGitHubシークレットに登録
 ```
+```
+うまくいかない。。
+umakuikan/
+に格納。pushしてActionsを見ると以下のエラー。
+
+Run azure/login@v1
+Using OIDC authentication...
+Federated token details: 
+ issuer - https://token.actions.githubusercontent.com 
+ subject claim - repo:roshiwata/IcA-test:ref:refs/heads/main
+/usr/bin/az cloud set -n azurecloud
+Done setting cloud: "azurecloud"
+Error: : No subscriptions found for ***.
+
+Error: Az CLI Login failed. Please check the credentials and make sure az is installed on the runner. For more information refer https://aka.ms/create-secrets-for-GitHub-workflows
+```
+とりあえずおいておいて以下実施
+https://blog.beachside.dev/entry/2021/08/27/183000
+
+
+※1
+```
+az ad sp create-for-rbac --name "github actions demo 1" --role contributor  --scopes /subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/iac-github --sdk-auth
+をすると、
+(MissingSubscription) The request did not have a subscription or a valid tenant level resource provider.
+Code: MissingSubscription
+Message: The request did not have a subscription or a valid tenant level resource provider.
+```
+
+
 
