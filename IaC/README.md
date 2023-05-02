@@ -89,11 +89,7 @@ az ad app federated-credential create \
 ```
 
 ```
-※
-az ad app create --display-name 'IcA-test'
-ではサービスプリンシパルは作成されないが、以下で作成されるのだ。
-az ad sp create --id <application-id>
-ただ、この作り方だと「すべてのアプリケーション」でしか作成されないのだ。。
+
 
 
 resourceGroupResourceId=$(az group create --name ToyWebsite --location westus3 --query id --output tsv)
@@ -135,4 +131,31 @@ Message: The request did not have a subscription or a valid tenant level resourc
 ```
 
 
+git bashだとダメでそれ以外だとOKだった。
+以下の記載もあったのだが、C:/Program Files/Gitという記載があった。よくわからんPathが切られていた。
+
+```
+Creating 'contributor' role assignment under scope 'C:/Program Files/Git/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/iac-github'
+  Role assignment creation failed.
+
+  role assignment response headers: {'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'x-ms-failure-cause': 'gateway', 'x-ms-request-id': '39c202ef-95ca-4056-9744-8fbea9c69114', 'x-ms-correlation-request-id': '39c202ef-95ca-4056-9744-8fbea9c69114', 'x-ms-routing-request-id': 'JAPANEAST:20230501T232515Z:39c202ef-95ca-4056-9744-8fbea9c69114', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'X-Content-Type-Options': 'nosniff', 'Date': 'Mon, 01 May 2023 23:25:14 GMT', 'Content-Length': '135'}
+```
+
+ということで、
+https://learn.microsoft.com/ja-jp/training/modules/build-first-bicep-deployment-pipeline-using-github-actions/5-exercise-create-github-secret?pivots=cli  
+の続き！！！
+
+```
+※
+az ad app create --display-name 'IcA-test'
+ではサービスプリンシパルは作成されないが、以下で作成されるのだ。
+az ad sp create --id <application-id>
+ただ、この作り方だと「すべてのアプリケーション」でしか作成されないのだ。。
+az ad sp create-for-rbac：アプリの登録もされるしエンタープライズにも追加されるが、エンタープライズの方は「すべてのアプリケーション」でしか出てこない。
+portalのアプリの登録から登録：アプリの登録もされるしエンタープライズにも追加される。「エンタープライズアプリケーション」として出てくる
+```
+
+
+
+az role assignment create --assignee $applicationRegistrationAppId --role Contributor --scope $resourceGroupResourceId
 
