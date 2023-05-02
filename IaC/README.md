@@ -183,3 +183,15 @@ on:
     paths:
       - 'deploy/**'
 ```
+pushされてなおかつdeploy/**　もしくは　test/**
+が変更されていたら自動デプロイ
+
+```
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'deploy/**'
+      - 'test/**'
+```
