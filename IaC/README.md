@@ -203,3 +203,12 @@ https://blog.beachside.dev/entry/2021/08/27/183000
 github-actions-test
 Credentials でちょっとすっきりできる
 https://github.com/roshiwata/github-actions-test
+
+
+
+
+
+
+### AKS/ ACRのデプロイ
+これでやろう。
+https://zenn.dev/takoeno/articles/56f3ac56fcc4f9
