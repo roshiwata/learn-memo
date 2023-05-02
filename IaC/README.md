@@ -195,3 +195,8 @@ on:
       - 'deploy/**'
       - 'test/**'
 ```
+
+
+### 一応これもやろう
+https://blog.beachside.dev/entry/2021/08/27/183000  
+github-actions-test
