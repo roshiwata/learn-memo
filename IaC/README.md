@@ -212,3 +212,5 @@ https://github.com/roshiwata/github-actions-test
 ### AKS/ ACRのデプロイ
 これでやろう。
 https://zenn.dev/takoeno/articles/56f3ac56fcc4f9
+
+AKSはマネージドIDを自分で作らないといけない（ユーザー割り当てマネージドID）
