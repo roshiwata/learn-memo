@@ -83,7 +83,7 @@ applicationRegistrationAppId=$(echo $applicationRegistrationDetails | jq -r '.ap
 
 az ad app federated-credential create \
    --id $applicationRegistrationObjectId \
-   --parameters "{\"name\":\"toy-website-workflow\",\"issuer\":\"https://token.actions.githubusercontent.com\",\"subject\":\"repo:${githubOrganizationName}/${githubRepositoryName}:ref:refs/heads/main\",\"audiences\":[\"api://AzureADTokenExchange\"]}"
+   --parameters "{\"name\":\"IcA-test\",\"issuer\":\"https://token.actions.githubusercontent.com\",\"subject\":\"repo:${githubOrganizationName}/${githubRepositoryName}:ref:refs/heads/main\",\"audiences\":[\"api://AzureADTokenExchange\"]}"
 
 
 ```
@@ -92,7 +92,8 @@ az ad app federated-credential create \
 
 
 
-resourceGroupResourceId=$(az group create --name ToyWebsite --location westus3 --query id --output tsv)
+resourceGroupResourceId=$(az group create --name ToyWebsite --location japaneast --query id --output tsv)
+az ad sp create --id $applicationRegistrationObjectId
 az role assignment create --assignee $applicationRegistrationAppId --role Contributor --scope $resourceGroupResourceId
 ⇒エラーが出る。(※1と同じ)
 
