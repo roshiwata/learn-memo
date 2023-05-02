@@ -160,3 +160,26 @@ portalのアプリの登録から登録：アプリの登録もされるしエ�
 
 az role assignment create --assignee $applicationRegistrationAppId --role Contributor --scope $resourceGroupResourceId
 
+リソースグループごとはOK
+
+手動でデプロイ（GitHub上でクリック）⇒
+```
+on: [workflow_dispatch]
+```
+自動デプロイ
+```
+on:
+  push:
+    branches:
+      - main
+```
+pushされてなおかつdeploy/**　
+が変更されていたら自動デプロイ
+```
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'deploy/**'
+```
