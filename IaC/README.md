@@ -250,3 +250,15 @@ echo "AZURE_TENANT_ID: $(az account show --query tenantId --output tsv)"
 echo "AZURE_SUBSCRIPTION_ID: $(az account show --query id --output tsv)"
 をGitHubシークレットに登録
 ```
+
+![image](https://user-images.githubusercontent.com/58873037/235725330-945df66a-8cc6-4d48-b91b-69f2c63bc855.png)
+
+
+
+https://stackoverflow.com/questions/74321138/azure-role-assignment-badrequestformat
+
+
+![image](https://user-images.githubusercontent.com/58873037/235725488-30a826e2-96f4-4444-afdc-630a50cff2b7.png)
+
+
+
