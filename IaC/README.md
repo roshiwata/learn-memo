@@ -145,6 +145,7 @@ Creating 'contributor' role assignment under scope 'C:/Program Files/Git/subscri
 ということで、
 https://learn.microsoft.com/ja-jp/training/modules/build-first-bicep-deployment-pipeline-using-github-actions/5-exercise-create-github-secret?pivots=cli  
 の続き！！！
+（https://github.com/roshiwata/IcA-test）
 
 ```
 ※
@@ -200,3 +201,5 @@ on:
 ### 一応これもやろう
 https://blog.beachside.dev/entry/2021/08/27/183000  
 github-actions-test
+Credentials でちょっとすっきりできる
+https://github.com/roshiwata/github-actions-test
