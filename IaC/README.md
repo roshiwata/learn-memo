@@ -283,9 +283,10 @@ https://stackoverflow.com/questions/74321138/azure-role-assignment-badrequestfor
 のように書き方を変えるとOK。
 
 そういえばロールの割り当ての有無を確認しよう
-
+あり
 ![image](https://user-images.githubusercontent.com/58873037/235822758-4c63d8e0-63d0-4886-9694-e8a8c58a41ef.png)
 
 ![image](https://user-images.githubusercontent.com/58873037/235822713-0ece97c1-56e5-4361-9b32-4ef168a0961e.png)
 
 
+なし
