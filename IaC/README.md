@@ -291,3 +291,10 @@ https://stackoverflow.com/questions/74321138/azure-role-assignment-badrequestfor
 
 
 なし
+![image](https://user-images.githubusercontent.com/58873037/235825192-8695ab17-e5db-4bc0-a114-2ae795c293a3.png)
+
+![image](https://user-images.githubusercontent.com/58873037/235825246-6fee7933-2893-4316-99ed-83153a9848e1.png)
+
+そういうことである！
+リソースは一度消さなかったらあり⇒なしにはできなかった。。なし⇒ありにはできた！
+リソースの設定とかデプロイは「上書き」なんだね
