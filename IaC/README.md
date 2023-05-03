@@ -263,3 +263,15 @@ https://stackoverflow.com/questions/74321138/azure-role-assignment-badrequestfor
 
 ![image](https://user-images.githubusercontent.com/58873037/235733700-2c5d9806-f7bf-48d5-8feb-7d61d76bf771.png)
 
+
+これ（github-actions-aks-all　e0efeba8-bd95-4379-ac84-f2e8e29d98c5）の権限が足りない気がする。
+
+このエラーは、指定されたクライアントに必要な権限が与えられていないことを示しています。指定されたクライアント（ e0efeba8-bd95-4379-ac84-f2e8e29d98c5 ）は、Microsoft.Authorization/roleAssignments/writeアクションを実行する権限を持っておらず、デプロイメントが失敗しました。
+
+![image](https://user-images.githubusercontent.com/58873037/235811126-b494ec86-6f64-4d59-a35d-a6d9625a2abd.png)
+
+
+所有者はロール割り当ての権限がありそう。。！
+
+![image](https://user-images.githubusercontent.com/58873037/235811458-4decd01a-6b3b-4fdd-9e31-080667611cf6.png)
+
