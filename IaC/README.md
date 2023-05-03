@@ -278,3 +278,10 @@ https://stackoverflow.com/questions/74321138/azure-role-assignment-badrequestfor
 
 権限を変えたらこのエラーに変わった。サブネットの指定方法に問題がありそう！
 ![image](https://user-images.githubusercontent.com/58873037/235817844-66f553de-f73b-4e26-a49c-e35285b089b2.png)
+
+#49 Change how to write subnet
+のように書き方を変えるとOK。
+
+そういえばロールの割り当ての有無を確認しよう
+
+
