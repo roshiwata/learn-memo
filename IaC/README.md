@@ -287,6 +287,7 @@ https://stackoverflow.com/questions/74321138/azure-role-assignment-badrequestfor
 ![image](https://user-images.githubusercontent.com/58873037/235822758-4c63d8e0-63d0-4886-9694-e8a8c58a41ef.png)
 
 ![image](https://user-images.githubusercontent.com/58873037/235822713-0ece97c1-56e5-4361-9b32-4ef168a0961e.png)
+![image](https://user-images.githubusercontent.com/58873037/235824432-dee76d99-bc04-473f-8e52-27c668d22a34.png)
 
 
 なし
