@@ -6,6 +6,7 @@ https://zenn.dev/komisan19/articles/f752c0d0299a92
 https://qiita.com/kiyokiyo_kzsby/items/344fb2e9aead158a5545　　
 でもエラーで実行できなかったから上のURLの環境を用いる。  
 
+s
 ### 起動確認  
 ```
 curl -X GET "localhost:9200/_cat/health?v&pretty"
