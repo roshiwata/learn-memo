@@ -321,3 +321,4 @@ https://learn.microsoft.com/ja-jp/azure/templates/microsoft.containerservice/202
 AKSクラスタはサイズとかが大きすぎたらエラーになっちゃった。
 
 assignAcrPullToAksの追加 #69で完結！！！！
+https://github.com/roshiwata/github-actions-aks-all
