@@ -62,4 +62,8 @@ Operation
    Front end の設定とか応答の追加とか。
    応答→　{ "sampleField" : "test" }
 
-APIの中にOperationがあるfsf
+APIの中にOperationがある
+
+
+## openAPI swagger
+https://zenn.dev/peraichi_blog/articles/01ges56ak79g2rket9wm27w9pc
