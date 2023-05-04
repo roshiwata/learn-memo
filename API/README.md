@@ -49,4 +49,17 @@ API利用
 ![image](https://user-images.githubusercontent.com/58873037/236207372-d3a0f768-0dbf-42d8-a27d-0ac2fc482051.png)
 
 
+Product
+　Consoto product
 
+
+API
+　Demo Conference API
+  Test API
+
+Operation
+　Test call
+   Front end の設定とか応答の追加とか。
+   応答→　{ "sampleField" : "test" }
+
+APIの中にOperationがある
