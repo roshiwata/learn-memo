@@ -316,3 +316,8 @@ https://learn.microsoft.com/en-us/azure/templates/microsoft.containerservice/man
 
 
 https://learn.microsoft.com/ja-jp/azure/templates/microsoft.containerservice/2022-04-01/managedclusters/agentpools?pivots=deployment-language-bicep
+
+
+AKSクラスタはサイズとかが大きすぎたらエラーになっちゃった。
+
+assignAcrPullToAksの追加 #69で完結！！！！
