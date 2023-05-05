@@ -68,3 +68,9 @@ APIの中にOperationがある
 
 ## openAPI swagger
 https://zenn.dev/peraichi_blog/articles/01ges56ak79g2rket9wm27w9pc
+
+https://panasonic-cns.udemy.com/course/rest-webapi-development/learn/lecture/19866400#overview
+
+
+![image](https://user-images.githubusercontent.com/58873037/236363030-3a8953ff-a50a-45c4-b747-e137820e69d9.png)
+
