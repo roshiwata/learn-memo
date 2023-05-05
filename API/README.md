@@ -95,4 +95,6 @@ https://panasonic-cns.udemy.com/course/rest-webapi-development/learn/lecture/198
  
  https://zenn.dev/s_t_pool/articles/954dfe51b950c18d08e9
  
+ ライセンスsリストp
  
+ https://spdx.org/licenses/
