@@ -88,6 +88,9 @@ https://panasonic-cns.udemy.com/course/rest-webapi-development/learn/lecture/198
 　200
  　ステータスコード
   　処理結果の概要
+
+
+https://labs.play-with-docker.com/p/cha9kk2e69v000dub5ag
  
  ![image](https://user-images.githubusercontent.com/58873037/236365109-69dfd655-495e-4838-90ba-5fbd6e37972f.png)
  
@@ -98,3 +101,7 @@ https://panasonic-cns.udemy.com/course/rest-webapi-development/learn/lecture/198
  ライセンスsリストp
  
  https://spdx.org/licenses/
+
+スタブの作成として、講座内ではこれを使用しているが、セキュリティ考えるとローカルでdocker立ち上げるのがよい
+
+https://labs.play-with-docker.com/p/cha9kk2e69v000dub5ag
