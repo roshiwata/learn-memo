@@ -74,3 +74,25 @@ https://panasonic-cns.udemy.com/course/rest-webapi-development/learn/lecture/198
 
 ![image](https://user-images.githubusercontent.com/58873037/236363030-3a8953ff-a50a-45c4-b747-e137820e69d9.png)
 
+![image](https://user-images.githubusercontent.com/58873037/236363909-87a06ae7-0892-4d67-9f15-01362c17c976.png)
+
+
+![image](https://user-images.githubusercontent.com/58873037/236364981-db1a290c-8146-454c-a2b7-f3595e9a5821.png)
+
+クエリパラメータ
+　省略可能
+パスパラメータ
+　一意のパラメータを示すのに必要かどうか
+ 
+ステータスコード
+　200
+ 　ステータスコード
+  　処理結果の概要
+ 
+ ![image](https://user-images.githubusercontent.com/58873037/236365109-69dfd655-495e-4838-90ba-5fbd6e37972f.png)
+ 
+ VScodeでOpenAPI環境を作成したいんだ
+ 
+ https://zenn.dev/s_t_pool/articles/954dfe51b950c18d08e9
+ 
+ 
