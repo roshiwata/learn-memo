@@ -137,3 +137,25 @@ restapi-springboot-may
 の中のAKSにnicegetアプリをデプロイ
 
 これをバックエンドとしてAPIを公開したいなあ。API managementで。
+
+
+
+https://github.com/roshiwata/springboot-MyBootApp/tree/apply1-get
+
+を用いてこれをAKSにデプロイ。
+
+nicegetとしてAPI managementに登録。
+
+![Screenshot from 2023-05-06 20-00-25](https://user-images.githubusercontent.com/58873037/236620265-c1044227-6723-4816-aee1-618f26d70e39.png)
+
+
+
+サブスクリプションは製品ごとに出来上がる。
+固定のAPIに作成してもよい。
+
+```
+a8dc2c53850744feab8275dc9895900b
+c2b3be5b567e42d48de15a9e6eed78cc
+```
+どちらでもOK。
+
