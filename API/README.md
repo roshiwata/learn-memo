@@ -156,6 +156,10 @@ add oprarionでFrontendを以下のように設定。
 ![Screenshot from 2023-05-06 20-02-20](https://user-images.githubusercontent.com/58873037/236620330-8d22c5fa-02ab-4a94-beff-e201d890ea81.png)
 
 
+一番右のバックエンドで以下のように設定。（AKSの外部IP）
+![Screenshot from 2023-05-06 20-18-07](https://user-images.githubusercontent.com/58873037/236620908-8996ea04-dcc7-4925-aaf6-f596b0a606d1.png)
+
+
 サブスクリプションは製品ごとに出来上がる。
 固定のAPIに作成してもよい。
 
@@ -164,5 +168,9 @@ a8dc2c53850744feab8275dc9895900b
 c2b3be5b567e42d48de15a9e6eed78cc
 ```
 どちらでもOK。
+```
+curl -X GET https://apim-wakayama-test-poc.azure-api.net/niceget/nice/get -H "Ocp-Apim-Subscription-Key: c2b3be5b567e42d48de15a9e6eed78cc"
+```
 
 ![Screenshot from 2023-05-06 19-57-36](https://user-images.githubusercontent.com/58873037/236620284-638fc23c-e65c-44d2-b7db-716a69d2f360.png)
+
