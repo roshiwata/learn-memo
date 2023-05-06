@@ -140,7 +140,8 @@ communication-springboot/app1/springboot-MyBootApp$ mvn spring-boot:run
 communication-springboot/app2/springboot-MyBootApp$ mvn spring-boot:run  
 curl -X GET http://localhost:8081/hello
 
-
+# ★★★★★★★こちらだとちゃんとpushできてる★★★★★★★★★★
+https://github.com/roshiwata/-communication-springboot3
 
 AKSにダブルデプロイしてみよう   
 sample-2　　
