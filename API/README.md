@@ -130,3 +130,10 @@ https://www.slideshare.net/uesaka/azure-api-management-20203-230674743?from_acti
 
 ![image](https://user-images.githubusercontent.com/58873037/236594962-82ff3696-2d1e-4ae1-bcd1-2b6a946d3884.png)
 
+
+
+restapi-springboot-may
+
+の中のAKSにnicegetアプリをデプロイ
+
+これをバックエンドとしてAPIを公開したいなあ。API managementで。
