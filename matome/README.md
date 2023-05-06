@@ -15,7 +15,7 @@ sudo apt update
 sudo apt -y install openjdk-17-jre
 ```
 
-=======ここまで済み=======
+
 
 # mvnコマンド
 ```
@@ -25,6 +25,9 @@ sudo mv apache-maven-3.9.1 /opt/
 rm apache-maven-3.9.1-bin.tar.gz
 echo "PATH="/opt/apache-maven-3.9.1/bin":$PATH" >> ~/.bashrc
 ```
+
+=======ここまで済み=======
+しかし、mvn --versionでエラー。。。原因を探らないと！
 
 
 # mvnコマンド
