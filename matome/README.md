@@ -17,6 +17,13 @@ sudo apt -y install openjdk-17-jre
 
 =======ここまで済み=======
 
+# mvnコマンド
+```
+cd /opt
+wget https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.tar.gz
+tar apache-maven-3.9.1-bin.tar.gz
+echo "PATH="/opt/apache-maven-3.9.1/bin":$PATH" >> ~/.bashrc
+```
 
 
 # mvnコマンド
