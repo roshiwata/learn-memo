@@ -322,3 +322,33 @@ AKSクラスタはサイズとかが大きすぎたらエラーになっちゃ�
 
 assignAcrPullToAksの追加 #69で完結！！！！
 https://github.com/roshiwata/github-actions-aks-all
+
+
+
+# AzureVMのバックアップ
+```
+wakayama-poc-test-mid01
+リソースID
+/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/wakayama-poc-rg/providers/Microsoft.Compute/virtualMachines/wakayama-poc-test-mid01
+
+wakayama-poc-test-sp01 
+/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/wakayama-poc-rg/providers/Microsoft.Compute/virtualMachines/wakayama-poc-test-sp01
+
+
+wakayama-poc-test01
+/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/wakayama-poc-rg/providers/Microsoft.Compute/virtualMachines/wakayama-poc-test01
+
+
+wakayama-poc-test02
+/subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/wakayama-poc-rg/providers/Microsoft.Compute/virtualMachines/wakayama-poc-test02
+```
+
+
+
+
+
+
+
+
+
+
