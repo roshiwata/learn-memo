@@ -144,6 +144,76 @@ https://github.com/roshiwata/springboot-MyBootApp/tree/apply1-get
 
 を用いてこれをAKSにデプロイ。
 
+
+
+
+```
+tatsu@tatsu-g15-ubuntu:~/07_springboot/22-5-5-2/springboot-MyBootApp$ az acr login --name restapispringbootmayacr
+Login Succeeded
+tatsu@tatsu-g15-ubuntu:~/07_springboot/22-5-5-2/springboot-MyBootApp$ mvn compile jib:build
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.tuyano.springboot:MyBootApp >-------------------
+[INFO] Building MyBootApp 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ MyBootApp ---
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ MyBootApp ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- jib:2.8.0:build (default-cli) @ MyBootApp ---
+[WARNING] 'mainClass' configured in 'maven-jar-plugin' is not a valid Java class: ${start-class}
+[INFO] 
+[INFO] Containerizing application to restapispringbootmayacr.azurecr.io/restapi-springboot-niceget...
+[WARNING] Base image 'mcr.microsoft.com/java/jdk:17-zulu-alpine' does not use a specific image digest - build may not be reproducible
+[INFO] Using credentials from Docker config (/home/tatsu/.docker/config.json) for restapispringbootmayacr.azurecr.io/restapi-springboot-niceget
+[INFO] Using base image with digest: sha256:3ea5bc673c87bcdab2db8b84ad25d183235b4c3d3bdee0b350d6e4f49b53f505
+[INFO] 
+[INFO] 
+[INFO] Container entrypoint set to [java, -cp, /app/resources:/app/classes:/app/libs/*, com.tuyano.springboot.MyBootAppApplication]
+[INFO] 
+[INFO] Built and pushed image as restapispringbootmayacr.azurecr.io/restapi-springboot-niceget
+[INFO] Executing tasks:
+[INFO] [==============================] 100.0% complete
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.707 s
+[INFO] Finished at: 2023-05-06T16:54:06+09:00
+[INFO] ------------------------------------------------------------------------
+tatsu@tatsu-g15-ubuntu:~/07_springboot/22-5-5-2/springboot-MyBootApp$ az aks get-credentials --resource-group restapi-springboot-may --name restapi-springboot-may-cluster
+Merged "restapi-springboot-may-cluster" as current context in /home/tatsu/.kube/config
+tatsu@tatsu-g15-ubuntu:~/07_springboot/22-5-5-2/springboot-MyBootApp$ kubectl create secret docker-registry acr-credential-com --docker-server=restapispringbootmayacr.azurecr.io --docker-username=restapispringbootmayacr --docker-password=BN+9GIvTWEBKgwrXFQ8Vbc9GDxJvEiAUp8gfSNDiXD+ACRAfDNMv --docker-email=tatsuhiro.0323@gmail.com
+secret/acr-credential-com created
+tatsu@tatsu-g15-ubuntu:~/07_springboot/22-5-5-2/springboot-MyBootApp$ cd kubernetes
+tatsu@tatsu-g15-ubuntu:~/07_springboot/22-5-5-2/springboot-MyBootApp/kubernetes$ ls
+deploy_apply1.yaml
+tatsu@tatsu-g15-ubuntu:~/07_springboot/22-5-5-2/springboot-MyBootApp/kubernetes$ kubectl apply -f deploy_apply1.yaml 
+service/niceget-apply created
+deployment.apps/niceget-apply created
+tatsu@tatsu-g15-ubuntu:~/07_springboot/22-5-5-2/springboot-MyBootApp/kubernetes$ kubectl get svc
+NAME            TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+kubernetes      ClusterIP      10.0.0.1       <none>        443/TCP        30m
+niceget-apply   LoadBalancer   10.0.154.227   <pending>     80:32115/TCP   11s
+tatsu@tatsu-g15-ubuntu:~/07_springboot/22-5-5-2/springboot-MyBootApp/kubernetes$ kubectl get svc
+NAME            TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)        AGE
+kubernetes      ClusterIP      10.0.0.1       <none>          443/TCP        30m
+niceget-apply   LoadBalancer   10.0.154.227   20.78.115.231   80:32115/TCP   14s
+tatsu@tatsu-g15-ubuntu:~/07_springboot/22-5-5-2/springboot-MyBootApp/kubernetes$ kubectl get pods
+NAME                             READY   STATUS    RESTARTS   AGE
+niceget-apply-7b5b955854-z4t4f   1/1     Running   0          36s
+tatsu@tatsu-g15-ubuntu:~/07_springboot/22-5-5-2/springboot-MyBootApp/kubernetes$ kubectl get pods
+NAME                             READY   STATUS    RESTARTS   AGE
+niceget-apply-7b5b955854-z4t4f   1/1     Running   0          39s
+```
+
+
+
 nicegetとしてAPI managementに登録。
 
 ![Screenshot from 2023-05-06 20-00-25](https://user-images.githubusercontent.com/58873037/236620265-c1044227-6723-4816-aee1-618f26d70e39.png)
