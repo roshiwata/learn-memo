@@ -115,3 +115,18 @@ https://labs.play-with-docker.com/p/cha9kk2e69v000dub5ag
 
 
 npm start
+
+
+
+API management
+
+https://www.slideshare.net/uesaka/azure-api-management-20203-230674743?from_action=save
+
+![image](https://user-images.githubusercontent.com/58873037/236594600-a055d3a3-3d47-4475-bf64-1e6b02c314c1.png)
+
+![image](https://user-images.githubusercontent.com/58873037/236594623-38c203d4-0b73-443c-9c79-f3212af92564.png)
+
+![image](https://user-images.githubusercontent.com/58873037/236594769-b506e125-9657-4e6e-a536-0522a493bf89.png)
+
+![image](https://user-images.githubusercontent.com/58873037/236594962-82ff3696-2d1e-4ae1-bcd1-2b6a946d3884.png)
+
