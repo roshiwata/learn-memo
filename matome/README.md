@@ -8,6 +8,9 @@ https://github.com/roshiwata/springboot-MyBootApp/tree/apply1
 https://github.com/roshiwata/-communication-springboot3
 
 
+# wes-develop-vm-ubuntu
+
+
 # java のインストール
 
 ```
