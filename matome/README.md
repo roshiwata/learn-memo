@@ -4,8 +4,12 @@
 ## vscode の拡張
 - Bicep
 - Remote-SSH
-- OpenAPI
-- 
+- OpenAPI (Swagger) Editor
+- Azure API Management
+- Open Api snippets
+- Swagger Viewer
+- YAML
+- Azure CLI Tools
 
 
 # SpringBoot
