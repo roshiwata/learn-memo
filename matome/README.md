@@ -30,24 +30,11 @@ echo "PATH="/opt/apache-maven-3.9.1/bin":$PATH" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-=======ここまで済み=======
-しかし、mvn --versionでエラー。。。原因を探らないと！
-source ~/.bashrc
-でおそらく解決。（ターミナル再起動でいけたもん）
-
-
-# mvnコマンド
-```
-https://maven.apache.org/download.cgi
-からapache-maven-3.9.1-bin.tar.gzをインストールして解凍し、/optに追加
-環境変数PATHに/opt/==/binを追加(~/.bashrc)
-```
-
 # azコマンド
 ```
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
-
+=======ここまで=======
 
 # python
 
