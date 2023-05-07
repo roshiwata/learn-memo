@@ -212,7 +212,7 @@ NAME                             READY   STATUS    RESTARTS   AGE
 niceget-apply-7b5b955854-z4t4f   1/1     Running   0          39s
 ```
 
-
+# ここからAPI Managementの基本使用方法
 
 nicegetとしてAPI managementに登録。
 
