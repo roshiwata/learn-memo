@@ -136,7 +136,7 @@ $ kubectl get pods
 ```
 
 ```
-curl -X GET http://localhost:8081/nice/get
+curl -X GET http://10.10.10.10/nice/get
 ```
 
 
