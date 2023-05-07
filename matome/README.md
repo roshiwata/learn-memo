@@ -91,7 +91,7 @@ echo "AZURE_SUBSCRIPTION_ID: $(az account show --query id --output tsv)"
 をGitHubシークレットに登録
 ```
 ```
-こちらをpushするとOK
+こちらをpushするとOK（上記の権限が違うので注意。IaCに書いてある）
 https://github.com/roshiwata/github-actions-aks-all
 ```
 
