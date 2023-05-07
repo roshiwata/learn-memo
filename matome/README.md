@@ -48,15 +48,58 @@ $ curl -X GET http://localhost:8081/nice/get
 ```
 
 ## Azure Kubetenetes Services
-### AKSクラスターを作成
 
+## bicep/githubによるデプロイ（AKSクラスターの作成）
+
+```
+# Githubのアカウント、リポジトリ設定
+**$ githubOrganizationName='roshiwata'
+$ githubRepositoryName='IcA-test'**
+
+# アプリの登録より、新規作成。アプリの詳細情報を取得（applicationRegistrationDetails）
+{ "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#applications/$entity", "addIns": [], "api": { "acceptMappedClaims": null, "knownClientApplications": [], "oauth2PermissionScopes": [], "preAuthorizedApplications": [], "requestedAccessTokenVersion": 2 }, "appId": "d65c6d7b-f205-4994-8f22-a65bff6104f7", "appRoles": [], "applicationTemplateId": null, "certification": null, "createdDateTime": "2023-05-02T10:56:12.018479Z", "defaultRedirectUri": null, "deletedDateTime": null, "description": null, "disabledByMicrosoftStatus": null, "displayName": "github-actions-aks-all", "groupMembershipClaims": null, "id": "ba44297c-6e99-4438-be95-c3ca89be290e", "identifierUris": [], "info": { "logoUrl": null, "marketingUrl": null, "privacyStatementUrl": null, "supportUrl": null, "termsOfServiceUrl": null }, "isDeviceOnlyAuthSupported": null, "isFallbackPublicClient": null, "keyCredentials": [], "notes": null, "optionalClaims": null, "parentalControlSettings": { "countriesBlockedForMinors": [], "legalAgeGroupRule": "Allow" }, "passwordCredentials": [], "publicClient": { "redirectUris": [] }, "publisherDomain": "tatsuhiro0323gmail.onmicrosoft.com", "requestSignatureVerification": null, "requiredResourceAccess": [], "samlMetadataUrl": null, "serviceManagementReference": null, "servicePrincipalLockConfiguration": null, "signInAudience": "AzureADandPersonalMicrosoftAccount", "spa": { "redirectUris": [] }, "tags": [], "tokenEncryptionKeyId": null, "verifiedPublisher": { "addedDateTime": null, "displayName": null, "verifiedPublisherId": null }, "web": { "homePageUrl": null, "implicitGrantSettings": { "enableAccessTokenIssuance": false, "enableIdTokenIssuance": false }, "logoutUrl": null, "redirectUriSettings": [], "redirectUris": [] } }
+**$ applicationRegistrationDetails=$(az ad app create --display-name 'IcA-test')**
+
+# オブジェクトID　ba44297c-6e99-4438-be95-c3ca89be290e
+**$ applicationRegistrationObjectId=$(echo $applicationRegistrationDetails | jq -r '.id')
+**
+
+# アプリケーションID　d65c6d7b-f205-4994-8f22-a65bff6104f7
+**$ applicationRegistrationAppId=$(echo $applicationRegistrationDetails | jq -r '.appId')
+**
+
+# フェデレーション資格情報をアプリに付与　IcA-test
+# アプリをgithubリポジトリ/ブランチに連携
+$ az ad app federated-credential create \
+   --id $applicationRegistrationObjectId \
+   --parameters "{\"name\":\"IcA-test\",\"issuer\":\"https://token.actions.githubusercontent.com\",\"subject\":\"repo:${githubOrganizationName}/${githubRepositoryName}:ref:refs/heads/main\",\"audiences\":[\"api://AzureADTokenExchange\"]}"
+
+# リソースグループを作成
+# resourceGroupResourceIdにリソースグループ情報を格納 /subscriptions/4463a0e9-df15-4e30-ac13-45e4e74bb39f/resourceGroups/github-actions-aks-all
+$ resourceGroupResourceId=$(az group create --name ToyWebsite --location japaneast --query id --output tsv)
+
+# サービスプリンシパルを作成
+$ az ad sp create --id $applicationRegistrationObjectId
+
+# リソースグループのアクセス制御にアプリを権限与える
+$ az role assignment create --assignee $applicationRegistrationAppId --role Contributor --scope $resourceGroupResourceId
+
+
+echo "AZURE_CLIENT_ID: $applicationRegistrationAppId"
+echo "AZURE_TENANT_ID: $(az account show --query tenantId --output tsv)"
+echo "AZURE_SUBSCRIPTION_ID: $(az account show --query id --output tsv)"
+をGitHubシークレットに登録
+```
+```
+こちらをpushするとOK
 https://github.com/roshiwata/github-actions-aks-all
+```
 
+### 懸念点
+- AKSのセキュリティ（IP制限、SSHキー）設定
+- VMのほうがよい？
 
-
-
-## bicep/githubによるデプロイ
-
+## AKSクラスターへのデプロイ
 
 
 
