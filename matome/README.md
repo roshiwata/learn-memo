@@ -100,10 +100,44 @@ https://github.com/roshiwata/github-actions-aks-all
 - VMのほうがよい？
 
 ## AKSクラスターへのデプロイ
+```
+https://github.com/roshiwata/springboot-MyBootApp/tree/apply1-get
+```
 
+pom.xmlの変更点
+```
+# docker imageの名前を設定(各Appにある)
+${docker.image.prefix}/springboo-apply1
 
+# AzureのACRを指定する場所（Wでアプリをデプロイしたいなら別の名前をつける）
+<docker.image.prefix>wesoffiresis.azurecr.io</docker.image.prefix>
+```
 
+docker imageを作成
+```
+# docker imageをそれぞれのappに対して作成（このあたりも自動化したいなあ）
+az acr login && mvn compile jib:build　　 
+```
 
+deploy_apply1.yamlの変更点
+```
+省略
+```
+
+```
+$ az acr login --name restapispringbootmayacr
+$ az aks get-credentials --resource-group restapi-springboot-may --name restapi-springboot-may-cluster
+$ kubectl create secret docker-registry acr-credential-com --docker-server=restapispringbootmayacr.azurecr.io --docker-username=restapispringbootmayacr --docker-password=BN+9GIvTWEBKgwrXFQ8Vbc9GDxJvEiAUp8gfSNDiXD+ACRAfDNMv --docker-email=tatsuhiro.0323@gmail.com
+$ cd kubernetes
+$ kubectl apply -f deploy_apply1.yaml 
+以下で外部IPアドレスを調べる。
+$ kubectl get svc
+$ kubectl get pods
+```
+
+```
+curl -X GET http://localhost:8081/nice/get
+```
 
 
 # SpringBoot
