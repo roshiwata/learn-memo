@@ -34,6 +34,10 @@ source ~/.bashrc
 ```
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
+
+
+
+
 =======ここまで=======
 
 # python
@@ -41,3 +45,15 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
 
 ```
+
+
+# 個人的なやつ
+```
+mkdir 01_poc
+cd 01_poc
+mkdir sample-springboot
+cd sample-springboot
+git clone git@github.com:roshiwata/springboot-MyBootApp.git
+
+```
+
