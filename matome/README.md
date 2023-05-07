@@ -49,6 +49,13 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 # 個人的なやつ
 ```
+ssh-keygen -t ed25519
+cd .ssh
+tail id_ed25519.pub
+〜GitHubのSSHに登録〜
+```
+
+```
 mkdir 01_poc
 cd 01_poc
 mkdir sample-springboot
