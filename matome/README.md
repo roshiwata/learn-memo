@@ -1,4 +1,11 @@
-# vscode の拡張
+# GW明けにやることリスト
+
+
+## vscode の拡張
+- Bicep
+- Remote-SSH
+- OpenAPI
+- 
 
 
 # SpringBoot
@@ -64,3 +71,6 @@ git clone git@github.com:roshiwata/springboot-MyBootApp.git
 
 ```
 
+```
+ssh -i ~/.ssh/keys/wakayama-poc-vm-key.pem -N -L 8081:localhost:8081 wesdeveloper@20.89.95.203
+```
