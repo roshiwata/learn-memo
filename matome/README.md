@@ -47,13 +47,29 @@ $ ssh -i ~/.ssh/keys/wakayama-poc-vm-key.pem -N -L 8081:localhost:8081 wesdevelo
 $ curl -X GET http://localhost:8081/nice/get
 ```
 
+## Azure Kubetenetes Services
+### AKSクラスターを作成
+
+https://github.com/roshiwata/github-actions-aks-all
+
+
+
+
+## bicep/githubによるデプロイ
+
+
+
+
+
 
 
 # SpringBoot
 
 https://github.com/roshiwata/springboot-MyBootApp/tree/apply1-get
 
+### 応用
 https://github.com/roshiwata/-communication-springboot3
 
+でpod間の通信
 
 「」
