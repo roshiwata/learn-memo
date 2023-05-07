@@ -10,6 +10,7 @@
 - Swagger Viewer
 - YAML
 - Azure CLI Tools
+- SQLTools
 
 
 # SpringBoot
