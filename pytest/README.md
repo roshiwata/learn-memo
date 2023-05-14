@@ -2,6 +2,7 @@
 $ pip3 install pytest
 $ pip3 freeze > requirements.txt
 ```
+![Screenshot from 2023-05-14 14-39-37](https://github.com/roshiwata/learn-memo/assets/58873037/f65597a8-8ecb-4c2f-b0b4-11f2c95987e6)
 
 
 ```
