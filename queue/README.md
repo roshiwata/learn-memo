@@ -91,6 +91,7 @@ https://qiita.com/gtracker64/items/b54c43ce5fe41fd4bd47
   - 複数の送信者受信者
     - 送信者は高スループットでメッセージを渡すことができる
   - 高速度で大量のデータを取り入れる独自の機能もある
+    - １ｓに数万？
 - 高スループット、多数のパブリッシャー、セキュリティ、回復性を持つイベント
 https://blog.nextscape.net/archives/Date/2015/08/eventhubs
 - ビッグデータ（データ・パイプライン）寄り。
@@ -140,9 +141,32 @@ https://blog.nextscape.net/archives/Date/2015/08/eventhubs2
 - メッセージは特定の受信者に直接送信され、データの伝達や要求と応答のパターンに使用されます。
 - イベントは興味のあるコンポーネントに対してブロードキャストされ、システム内の事象や状態の変化を通知するために使用されます。
 
+## Event Grid vs Event Hubs vs Service Bus
+- https://www.youtube.com/watch?v=NCYaUcoaAqo
 
-# まとめ
-・
-・
+Event Grid
+- Azureのサービス間の通信
+- すでに存在するAzureサービスを前提に稼働する
+- リアクティブプログラミングで使用される。（高速）
+
+Event Hubs
+
+
+
+## Azure Event Hub, Event Grid, and Service Bus - Made Simple
+- https://www.youtube.com/watch?v=hqtUZNmVVdA
+- Queue
+  - 1対1  
+  - 1つのあぷりによってのみ消費される
+
+イベントとメッセージの違い
+- イベント
+  - 公開または発行する情報の一部
+  - 誰がそれぞ受信するかは気にしない
+  - 通常、イベントは状態変化のようなもの
+  - イベントの変化に対して処理をするが、誰が何をしたのかは気にしない
+  - メッセージの送信者にメッセージが処理されたことを確認してもらいたい場合
+    - 公開者はそのメッセージが処理されることを期待している
+- メッセージ
 
 
