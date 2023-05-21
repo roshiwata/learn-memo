@@ -80,6 +80,12 @@ https://qiita.com/gtracker64/items/b54c43ce5fe41fd4bd47
 ## Event Grid：
 - シンプルなイベント
 - イベントのパブリッシュ/サブスクライブモデルに基づくイベント配信サービス
+- Pull型　サブスクライバがさばききれないとエラーになる
+- Event Grid はサブスクライバに配信された直後にメッセージはトピックから削除される。またサブスクライバでエラーが起きてもメッセージは戻らない。
+- メッセージの順序を保証しない
+- イベント駆動のリアクティブ・プログラミングを可能にするメッセージのイベントハンドラ。
+
+
 
 ## Event Hubs：
   - 複数の送信者受信者
@@ -87,6 +93,7 @@ https://qiita.com/gtracker64/items/b54c43ce5fe41fd4bd47
   - 高速度で大量のデータを取り入れる独自の機能もある
 - 高スループット、多数のパブリッシャー、セキュリティ、回復性を持つイベント
 https://blog.nextscape.net/archives/Date/2015/08/eventhubs
+- ビッグデータ（データ・パイプライン）寄り。
 
 - Publisher/Subscriber
 - Producer/Consumer
@@ -127,4 +134,15 @@ https://blog.nextscape.net/archives/Date/2015/08/eventhubs2
 ![image](https://github.com/roshiwata/learn-memo/assets/58873037/75ed14e0-cd47-4792-a7dc-217532087407)
 
 
-## Azure Event Hubs vs Service Bus
+
+
+
+- メッセージは特定の受信者に直接送信され、データの伝達や要求と応答のパターンに使用されます。
+- イベントは興味のあるコンポーネントに対してブロードキャストされ、システム内の事象や状態の変化を通知するために使用されます。
+
+
+# まとめ
+・
+・
+
+
