@@ -59,7 +59,6 @@ https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-azure-
   - 複数のサブスクライバー（受信者）が必要
 
 
-ｆ
 ## 検討事項
 - どれくらいの容量使うのだろう。80GBで十分か？
   - 十分だと思う。（1出荷指示_KB　×　_指示数）
@@ -71,10 +70,53 @@ https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-azure-
   - 一旦不要そうだがあったほうがよさそう
 ⇛「Service Bus」
 
+
 # イベント系
 ## Event Grid：
 - シンプルなイベント
+- イベントのパブリッシュ/サブスクライブモデルに基づくイベント配信サービス
 
 ## Event Hubs：
 - 高スループット、多数のパブリッシャー、セキュリティ、回復性を持つイベント
+https://blog.nextscape.net/archives/Date/2015/08/eventhubs
+
+- Publisher/Subscriber
+- Producer/Consumer
+- 発行者
+- Broker
+
+- EventHubsは「イベントの貯蔵庫」
+　- ある一定期間イベントという名の文字列を貯め込む
+    - イベントを投げるやつのことを以下のように言い換えている
+      - Publisher/ Producer/ 発行者（Producerの訳）
+    - 受け取る側のことを
+      - Subscriber/ Consumer
+    - EventHubsのように間に入ってうまいことやってくれる仲介者
+      - Broker
+- サイズ制限が結構厳しい
+- イベントは受信しても消えない
+  - 〇〇日間保持するという設定をできる。その日数立たないとイベントは消えない
+    - キューとは少し感覚が違う
+
+- EventHubsの構造
+  - 内部にパーティションを持つ
+    - １〜３２　（初期値８）
+    - どのパーテションに格納するかは決められるがイベントハブに任せることができる
+    - 並列で処理させるためにそうなっている
+
+![Screenshot from 2023-05-21 15-56-38](https://github.com/roshiwata/learn-memo/assets/58873037/3a8085ff-f64a-47de-a6f6-607c94cec889)
+
+- 
+https://blog.nextscape.net/archives/Date/2015/08/eventhubs2
+
+- EventHubsに格納されたイベントは、自分で取りに行くのではなく、通知されるプッシュ型である
+- EventHubsに格納されたイベントは外側から消すことはできません。保持期間が過ぎるのをじっと待つだけです。
+
+![image](https://github.com/roshiwata/learn-memo/assets/58873037/c38d1389-1f99-41af-8b07-4ecbf0da0b55)
+
+![image](https://github.com/roshiwata/learn-memo/assets/58873037/4105f355-c06c-4841-82cd-0623ae29cb98)
+
+![image](https://github.com/roshiwata/learn-memo/assets/58873037/75ed14e0-cd47-4792-a7dc-217532087407)
+
+
 
