@@ -3,7 +3,8 @@ https://qiita.com/gtracker64/items/b54c43ce5fe41fd4bd47
 
 
 ## メッセージ系
-https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted
+- https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted
+- https://www.serverless360.com/blog/azure-event-hubs-vs-service-bus
 
 ### Queue Storage
 - シンプルなメッセージキュー
@@ -18,6 +19,8 @@ https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-azure-
 
 ## Service Bus
 ### キュー：
+![image](https://github.com/roshiwata/learn-memo/assets/58873037/44ced4f1-f5b1-460b-8199-4052dc2b1a5d)
+
 - 単一の受信者
 - 柔軟なキュー
 - 容量は最大80GB
@@ -41,6 +44,8 @@ https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-azure-
 
 
 ### トピック：
+![image](https://github.com/roshiwata/learn-memo/assets/58873037/79b11ba0-17fb-4172-9416-81c03fccd913)
+
 - 複数の受信者
 - 複数クライアントからのサブスク・処理が可能
 
@@ -77,6 +82,9 @@ https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-azure-
 - イベントのパブリッシュ/サブスクライブモデルに基づくイベント配信サービス
 
 ## Event Hubs：
+  - 複数の送信者受信者
+    - 送信者は高スループットでメッセージを渡すことができる
+  - 高速度で大量のデータを取り入れる独自の機能もある
 - 高スループット、多数のパブリッシャー、セキュリティ、回復性を持つイベント
 https://blog.nextscape.net/archives/Date/2015/08/eventhubs
 
@@ -119,4 +127,4 @@ https://blog.nextscape.net/archives/Date/2015/08/eventhubs2
 ![image](https://github.com/roshiwata/learn-memo/assets/58873037/75ed14e0-cd47-4792-a7dc-217532087407)
 
 
-
+## Azure Event Hubs vs Service Bus
